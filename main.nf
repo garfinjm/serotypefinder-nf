@@ -72,6 +72,6 @@ process runSerotypefinder {
 	set val(id), file("sero-${id}/*.*") into serotypefinderPredictions
 
 	"""
-	serotypefinder.pl -d /serotypefinder/database -s ecoli -k 85 -l 60   -i ${assembly} -o sero-${id}
+	serotypefinder.pl -d /serotypefinder/database -s ecoli -k 85 -l 0.60 -i ${assembly} -o sero-${id}
 	"""
 }
